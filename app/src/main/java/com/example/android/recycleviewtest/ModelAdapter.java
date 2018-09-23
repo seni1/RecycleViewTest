@@ -13,11 +13,12 @@ import java.util.List;
 
 public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.ViewHolder> {
 
-    private ArrayList <Model> modelList;
+    private final ArrayList<Model> modelList;
+    private ArrayList <Model> mModel;
 
-    public ModelAdapter(ArrayList<Model> modelArrayList) {
+    public ModelAdapter(ArrayList<Model> modelList) {
+        this.modelList = modelList;
     }
-
 
     @NonNull
     @Override
