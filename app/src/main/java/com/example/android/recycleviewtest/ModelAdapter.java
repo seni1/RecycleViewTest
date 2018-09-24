@@ -54,4 +54,9 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.ViewHolder> 
         }
 
     }
+
+    public void setData(List<Result>list) {
+        mModel.addAll(list);
+        notifyDataSetChanged();
+    }
 }

@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,13 +32,19 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
+
+        getNews();
     }
 
     private void getNews() {
+
         App.getApi().getData(KEY).enqueue(new Callback<News>() {
             @Override
             public void onResponse(Call<News> call, Response<News> response) {
-
+                if (response.body() != null) {
+                    modelArrayList.clear();
+                    adapter.setData(response.body().getResponse().getResults());
+                }
             }
 
             @Override
@@ -45,4 +53,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-}
+    }
