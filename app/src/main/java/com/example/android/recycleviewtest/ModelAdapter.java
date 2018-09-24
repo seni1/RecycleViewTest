@@ -13,10 +13,10 @@ import java.util.List;
 
 public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.ViewHolder> {
 
-    private final ArrayList<Model> modelList;
-    private ArrayList <Model> mModel;
+    private final ArrayList<Result> modelList;
+    private ArrayList <Result> mModel;
 
-    public ModelAdapter(ArrayList<Model> modelList) {
+    public ModelAdapter(ArrayList<Result> modelList) {
         this.modelList = modelList;
     }
 
@@ -30,9 +30,9 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Model model = modelList.get(position);
-        holder.name.setText(model.getName());
-        holder.number.setText(String.valueOf(model.getNumber()));
+        Result result = modelList.get(position);
+        holder.name.setText(result.getWebTitle());
+//        holder.number.setText(String.valueOf(model.getNumber()));
 
     }
 
@@ -50,7 +50,7 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.ViewHolder> 
             super(itemView);
 
             name = itemView.findViewById(R.id.tv_name);
-            number = itemView.findViewById(R.id.tv_number);
+//            number = itemView.findViewById(R.id.tv_number);
         }
 
     }
