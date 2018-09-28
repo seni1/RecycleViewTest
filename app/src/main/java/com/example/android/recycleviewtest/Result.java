@@ -1,4 +1,3 @@
-
 package com.example.android.recycleviewtest;
 
 import com.google.gson.annotations.Expose;
@@ -8,124 +7,136 @@ public class Result {
 
     @SerializedName("id")
     @Expose
-    private String id;
+    private String id;
     @SerializedName("type")
     @Expose
-    private String type;
+    private String type;
     @SerializedName("sectionId")
     @Expose
-    private String sectionId;
+    private String sectionId;
     @SerializedName("sectionName")
     @Expose
-    private String sectionName;
+    private String sectionName;
     @SerializedName("webPublicationDate")
     @Expose
-    private String webPublicationDate;
+    private String webPublicationDate;
     @SerializedName("webTitle")
     @Expose
-    private String webTitle;
+    private String webTitle;
     @SerializedName("webUrl")
     @Expose
-    private String webUrl;
+    private String webUrl;
     @SerializedName("apiUrl")
     @Expose
-    private String apiUrl;
+    private String apiUrl;
+    @SerializedName("fields")
+    @Expose
+    private Fields fields;
     @SerializedName("isHosted")
     @Expose
-    private boolean isHosted;
+    private boolean isHosted;
     @SerializedName("pillarId")
     @Expose
-    private String pillarId;
+    private String pillarId;
     @SerializedName("pillarName")
     @Expose
-    private String pillarName;
+    private String pillarName;
 
-    public String getId() {
-        return id;
+    public String getId() {
+        return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getType() {
+        return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getSectionId() {
-        return sectionId;
+    public String getSectionId() {
+        return sectionId;
     }
 
-    public void setSectionId(String sectionId) {
-        this.sectionId = sectionId;
+    public void setSectionId(String sectionId) {
+        this.sectionId = sectionId;
     }
 
-    public String getSectionName() {
-        return sectionName;
+    public String getSectionName() {
+        return sectionName;
     }
 
-    public void setSectionName(String sectionName) {
-        this.sectionName = sectionName;
+    public void setSectionName(String sectionName) {
+        this.sectionName = sectionName;
     }
 
-    public String getWebPublicationDate() {
-        return webPublicationDate;
+    public String getWebPublicationDate() {
+        return webPublicationDate;
     }
 
-    public void setWebPublicationDate(String webPublicationDate) {
-        this.webPublicationDate = webPublicationDate;
+    public void setWebPublicationDate(String webPublicationDate) {
+        this.webPublicationDate = webPublicationDate;
     }
 
-    public String getWebTitle() {
-        return webTitle;
+    public String getWebTitle() {
+        return webTitle;
     }
 
-    public void setWebTitle(String webTitle) {
-        this.webTitle = webTitle;
+    public void setWebTitle(String webTitle) {
+        this.webTitle = webTitle;
     }
 
-    public String getWebUrl() {
-        return webUrl;
+    public String getWebUrl() {
+        return webUrl;
     }
 
-    public void setWebUrl(String webUrl) {
-        this.webUrl = webUrl;
+    public void setWebUrl(String webUrl) {
+        this.webUrl = webUrl;
     }
 
-    public String getApiUrl() {
-        return apiUrl;
+    public String getApiUrl() {
+        return apiUrl;
     }
 
-    public void setApiUrl(String apiUrl) {
-        this.apiUrl = apiUrl;
+    public void setApiUrl(String apiUrl) {
+        this.apiUrl = apiUrl;
     }
 
-    public boolean isIsHosted() {
-        return isHosted;
+    public Fields getFields() {
+        return fields;
     }
 
-    public void setIsHosted(boolean isHosted) {
-        this.isHosted = isHosted;
+    public void setFields(Fields fields) {
+        this.fields = fields;
     }
 
-    public String getPillarId() {
-        return pillarId;
+    public boolean isIsHosted() {
+        return isHosted;
     }
 
-    public void setPillarId(String pillarId) {
-        this.pillarId = pillarId;
+    public void setIsHosted(boolean isHosted) {
+        this.isHosted = isHosted;
     }
 
-    public String getPillarName() {
-        return pillarName;
+    public String getPillarId() {
+        return pillarId;
     }
 
-    public void setPillarName(String pillarName) {
-        this.pillarName = pillarName;
+    public void setPillarId(String pillarId) {
+        this.pillarId = pillarId;
     }
+
+    public String getPillarName() {
+        return pillarName;
+    }
+
+    public void setPillarName(String pillarName) {
+        this.pillarName = pillarName;
+    }
+
 
 }

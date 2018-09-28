@@ -8,5 +8,6 @@ public interface GuardianApi {
 
     @GET("search")
     Call<News> getData(
+            @Query("show-fields") String image,
             @Query("api-key") String key);
 }

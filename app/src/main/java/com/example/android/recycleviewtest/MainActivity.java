@@ -15,10 +15,12 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Result> modelArrayList;
     public static final String KEY = "821e14cc-28be-4754-8198-f252cb12a1a2";
+    public static final String IMAGE = "thumbnail";
 
     private RecyclerView recyclerView;
     private ModelAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rv_model);
         modelArrayList = new ArrayList<>();
-        adapter = new ModelAdapter(modelArrayList);
+        adapter = new ModelAdapter(getApplicationContext(), modelArrayList);
         layoutManager = new LinearLayoutManager(this);
 
         recyclerView.setAdapter(adapter);
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getNews() {
 
-        App.getApi().getData(KEY).enqueue(new Callback<News>() {
+        App.getApi().getData(IMAGE, KEY).enqueue(new Callback<News>() {
             @Override
             public void onResponse(Call<News> call, Response<News> response) {
                 if (response.body() != null) {
